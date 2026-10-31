@@ -360,7 +360,7 @@
     "DESCRIPTION": "!B! [BoardGame:BlockIcon]",
     "UPGRADE_DESCRIPTION": "!B! [BoardGame:BlockIcon] to any player."
   },
-  "BoardGame:BGDefend_M": {
+  "BoardGame:BGDefend_P": {
     "NAME": "Defend",
     "DESCRIPTION": "!B! [BoardGame:BlockIcon]",
     "UPGRADE_DESCRIPTION": "!B! [BoardGame:BlockIcon] to any player."
@@ -1199,7 +1199,7 @@
     "NAME": "Strike",
     "DESCRIPTION": "!D! [BoardGame:HitIcon]"
   },
-  "BoardGame:BGStrike_M": {
+  "BoardGame:BGStrike_P": {
     "NAME": "Strike",
     "DESCRIPTION": "!D! [BoardGame:HitIcon]"
   },
@@ -1638,5 +1638,39 @@
   "BoardGame:BGRailgun_MentalOut":{
     "NAME": "Mental Out",
     "DESCRIPTION": "Ethereal. [BoardGame:WeakIcon] [BoardGame:WeakIcon] [BoardGame:WeakIcon] Exhaust."
+  },
+  "BoardGame:BG_Goofball":{
+    "NAME": "Goofball",
+    "DESCRIPTION": "[#EFC851]Once [#EFC851]per [#EFC851]turn[]: NL Discard all cards without Retain. Draw 5 cards. Gain [E] [E] [E] ."
+  },
+  "BoardGame:BGBump":{
+    "NAME": "Bump",
+    "DESCRIPTION": "Move the enemy to another row. Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Move the enemy to another row. NL !D! [BoardGame:HitIcon] NL Draw !M! card."
+  },
+  "BoardGame:BGRNG_Cannon":{
+    "NAME": "RNG Cannon",
+    "DESCRIPTION": "Scry 7. Play any 2 Attacks revealed this way."
+  },
+  "BoardGame:BGTransmutation":{
+    "NAME": "RNG Cannon",
+    "DESCRIPTION": "Play the top X cards of the Colorless reward deck."
+  },
+  "BoardGame:BGMetronome":{
+    "NAME": "Metronome",
+    "DESCRIPTION": "Play the top X cards of the your reward deck."
+  },
+  "BoardGame:BGPower_Up":{
+    "NAME": "Power Up",
+    "DESCRIPTION": "Draw X cards. Play ALL Powers drawn this way."
+  },
+  "BoardGame:BGBegone":{
+    "NAME": "BEGONE!",
+    "DESCRIPTION": "Draw X cards. Play ALL Powers drawn this way."
+  },
+  "BoardGame:BGCelestial Might":{
+    "NAME": "Celestial Might",
+    "DESCRIPTION": "!D! [BoardGame:HitIcon] !D! [BoardGame:HitIcon]!D! [BoardGame:HitIcon]",
+    "UPGRADE_DESCRIPTION": " !D! [BoardGame:HitIcon]"
   }
 }

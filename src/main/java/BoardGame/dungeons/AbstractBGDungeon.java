@@ -4,7 +4,7 @@ import BoardGame.cards.BGBlue.BGClaw;
 import BoardGame.cards.BGBlue.BGClaw2;
 import BoardGame.cards.BGCurse.*;
 import BoardGame.cards.*;
-import BoardGame.cards.BGMint.BGGoldenTicket_M;
+import BoardGame.cards.BGMint.BGGoldenTicket_P;
 import BoardGame.cards.BGStatus.BGError;
 import BoardGame.characters.*;
 import BoardGame.events.BGColosseum;
@@ -167,15 +167,24 @@ public abstract class AbstractBGDungeon extends AbstractDungeon {
                     else if(i==1)gt=new BGGoldenTicket_G();
                     else if(i==2)gt=new BGGoldenTicket_B();
                     else if(i==3)gt=new BGGoldenTicket_W();
-                    else gt=new BGGoldenTicket_M();
+                    else gt=new BGGoldenTicket_P();
                     rewards.addToTop(gt.makeCopy());
                     rewards.addToTop(gt.makeCopy());
+                    if(i==4) {
+                        rewards.addToTop(gt.makeCopy());
+                        rewards.addToTop(gt.makeCopy());
+                        rewards.addToTop(gt.makeCopy());
+                        rewards.addToTop(gt.makeCopy());
+                        rewards.addToTop(gt.makeCopy());
+                        rewards.addToTop(gt.makeCopy());
+                    }
                     ArrayList<AbstractCard> tmpPool = new ArrayList<>();
                     if(i==0) new BGIronclad("Ironclad physical card pool", BGIronclad.Enums.BG_IRONCLAD).getCardPool(tmpPool);
                     else if(i==1) new BGSilent("Silent physical card pool", BGSilent.Enums.BG_SILENT).getCardPool(tmpPool);
                     else if(i==2) new BGDefect("Defect physical card pool", BGDefect.Enums.BG_DEFECT).getCardPool(tmpPool);
                     else if(i==3) new BGWatcher("Watcher physical card pool", BGWatcher.Enums.BG_WATCHER).getCardPool(tmpPool);
-                    else if(i==4) new BGRailgun("Railgun physical card pool", BGRailgun.Enums.BG_RAILGUN).getCardPool(tmpPool);
+                    else new BGJester("Jester physical card pool", BGJester.Enums.BG_JESTER).getCardPool(tmpPool);
+
                     for (AbstractCard c : tmpPool) {
                         switch (c.rarity) {
                             case COMMON:
@@ -198,9 +207,15 @@ public abstract class AbstractBGDungeon extends AbstractDungeon {
                         }
                     }
                     if(i==4){
-                        for(int j=0; j<BGClaw2.getClawPackCount() - 2 ; j+=1){
-                            rewards.addToTop(new BGClaw2());
+                        for (int j = 0; j < 4; j++) {
+                            for (int k = 0; k < physicalRewardDecks.get(j).size(); k++)
+                            {
+                                rewards.addToTop(physicalRewardDecks.get(j).getNCardFromTop(k).makeCopy());
+                            }
                         }
+                        /*for(int j=0; j<BGClaw2.getClawPackCount();j+=1){
+                            rewards.addToTop(new BGClaw2());
+                        }*/
                     }
                     rewards.shuffle(cardRng);
                     rares.shuffle(cardRng);
@@ -217,7 +232,7 @@ public abstract class AbstractBGDungeon extends AbstractDungeon {
                 else if(AbstractDungeon.player instanceof BGSilent) whoAmI=1;
                 else if(AbstractDungeon.player instanceof BGDefect) whoAmI=2;
                 else if(AbstractDungeon.player instanceof BGWatcher) whoAmI=3;
-                else if(AbstractDungeon.player instanceof BGRailgun) whoAmI=4;
+                else if(AbstractDungeon.player instanceof BGJester) whoAmI=4;
                 AbstractBGDungeon.rewardDeck = physicalRewardDecks.get(whoAmI);
                 AbstractBGDungeon.rareRewardDeck = physicalRareRewardDecks.get(whoAmI);
 
@@ -255,7 +270,7 @@ public abstract class AbstractBGDungeon extends AbstractDungeon {
                 logger.info("Silent physical deck contains "+physicalRewardDecks.get(1).size()+" cards");
                 logger.info("Defect physical deck contains "+physicalRewardDecks.get(2).size()+" cards");
                 logger.info("Watcher physical deck contains "+physicalRewardDecks.get(3).size()+" cards");
-                logger.info("Railgun physical deck contains "+physicalRewardDecks.get(4).size()+" cards");
+                logger.info("Jester physical deck contains "+physicalRewardDecks.get(4).size()+" cards");
                 logger.info("Colorless deck contains "+colorlessRewardDeck.size()+" cards");
                 logger.info("Curses deck contains "+cursesRewardDeck.size()+" cards");
                 logger.info("Current reward deck "+whoAmI+" is "+physicalRewardDecks.get(whoAmI).size()+" cards");

@@ -1,8 +1,6 @@
 package BoardGame.cards.BGMint;
-import BoardGame.cards.AbstractBGCard;
 import BoardGame.cards.AbstractBGSpendCard;
-import BoardGame.characters.BGIronclad;
-import BoardGame.characters.BGRailgun;
+import BoardGame.characters.BGJester;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -10,6 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -17,11 +16,12 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 
-public class BGBiribiri extends AbstractBGSpendCard {
-    public static final String ID = makeID(BGBiribiri.class, "Railgun");
+public class BGHatTrick extends AbstractBGSpendCard {
+    public static final String ID = makeID(BGHatTrick.class, "Railgun");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("BoardGame:" + ID);
-    public BGBiribiri() {
-        super(ID, cardStrings.NAME, "red/power/inflame", 1, cardStrings.DESCRIPTION, CardType.POWER, BGRailgun.Enums.BG_MINT, CardRarity.UNCOMMON, CardTarget.SELF);
+
+    public BGHatTrick() {
+        super(ID, cardStrings.NAME, "green/attack/strike", 1, cardStrings.DESCRIPTION, CardType.POWER, BGJester.Enums.BG_PINK, CardRarity.BASIC, CardTarget.SELF);
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
     }
@@ -32,6 +32,10 @@ public class BGBiribiri extends AbstractBGSpendCard {
         addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p, (AbstractPower)new StrengthPower((AbstractCreature)p, this.magicNumber), this.magicNumber));
     }
 
+    @Override
+    public void triggerOnExhaust() {
+        addToBot((AbstractGameAction)new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, (AbstractPower)new StrengthPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
+    }
 
     public void upgrade() {
         if (!this.upgraded) {
@@ -43,7 +47,7 @@ public class BGBiribiri extends AbstractBGSpendCard {
 
 
     public AbstractCard makeCopy() {
-        return new BGBiribiri();
+        return new BGHatTrick();
     }
 }
 

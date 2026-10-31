@@ -120,6 +120,7 @@ public class BoardGame implements
     public static final Color BG_DEFECT_BLUE = CardHelper.getColor(8, 52, 123);
     public static final Color BG_RAILGUN_MINT = CardHelper.getColor(52, 123, 123);
     public static final Color BG_WATCHER_PURPLE = CardHelper.getColor(153, 52, 8);
+    public static final Color BG_JESTER_PINK = CardHelper.getColor(253, 152, 108);
     public static final Color BG_CURSE_BLACK = CardHelper.getColor(29, 29, 29);
     public static final Color BG_COLORLESS_GRAY = CardHelper.getColor(0.15F, 0.15F, 0.15F);
     // Potion Colors in RGB
@@ -196,6 +197,18 @@ public class BoardGame implements
     private static final String ENERGY_ORB_P_RAILGUN = "BoardGameResources/images/1024/card_orb_theRailgun.png";
     public static final String CHAR_SELECT_BUTTON_RAILGUN = "images/ui/charSelect/watcherButton.png";
     private static final String CHAR_SELECT_PORTRAIT_RAILGUN = "images/ui/charSelect/watcherPortrait.jpg";
+
+    private static final String BGATTACK_JESTER = "BoardGameResources/images/512/bg_attack_theJester.png";
+    private static final String BGSKILL_JESTER = "BoardGameResources/images/512/bg_skill_theJester.png";
+    private static final String BGPOWER_JESTER = "BoardGameResources/images/512/bg_power_theJester.png";
+    private static final String ENERGY_ORB_JESTER = "BoardGameResources/images/512/card_orb_theJester.png";
+    private static final String SMALL_ORB_JESTER = "BoardGameResources/images/512/card_small_orb.png";
+    private static final String BGATTACK_P_JESTER = "BoardGameResources/images/1024/bg_attack_theJester.png";
+    private static final String BGSKILL_P_JESTER = "BoardGameResources/images/1024/bg_skill_theJester.png";
+    private static final String BGPOWER_P_JESTER = "BoardGameResources/images/1024/bg_power_theJester.png";
+    private static final String ENERGY_ORB_P_JESTER = "BoardGameResources/images/1024/card_orb_theJester.png";
+    public static final String CHAR_SELECT_BUTTON_JESTER = "images/ui/charSelect/watcherButton.png";
+    private static final String CHAR_SELECT_PORTRAIT_JESTER = "images/ui/charSelect/watcherPortrait.jpg";
 
     
     private static final String ENERGY_ORB_COLORLESS = "BoardGameResources/images/512/card_orb_Colorless.png";
@@ -305,11 +318,11 @@ public class BoardGame implements
                 BGATTACK_P_WATCHER, BGSKILL_P_WATCHER, BGPOWER_P_WATCHER,
                 ENERGY_ORB_P_WATCHER, SMALL_ORB_WATCHER);
 
-        logger.info("Creating the color " + BGRailgun.Enums.BG_MINT.toString());
-        BaseMod.addColor(BGRailgun.Enums.BG_MINT, BG_RAILGUN_MINT,
-                BGATTACK_RAILGUN, BGSKILL_RAILGUN, BGPOWER_RAILGUN, ENERGY_ORB_RAILGUN,
-                BGATTACK_P_RAILGUN, BGSKILL_P_RAILGUN, BGPOWER_P_RAILGUN,
-                ENERGY_ORB_P_RAILGUN, SMALL_ORB_RAILGUN);
+        logger.info("Creating the color " + BGJester.Enums.BG_PINK.toString());
+        BaseMod.addColor(BGJester.Enums.BG_PINK, BG_JESTER_PINK,
+                BGATTACK_JESTER, BGSKILL_JESTER, BGPOWER_JESTER, ENERGY_ORB_JESTER,
+                BGATTACK_P_JESTER, BGSKILL_P_JESTER, BGPOWER_P_JESTER,
+                ENERGY_ORB_P_JESTER, SMALL_ORB_JESTER);
 
         logger.info("Creating the color " + BGCurse.Enums.BG_CURSE.toString());
         BaseMod.addColor(BGCurse.Enums.BG_CURSE, BG_CURSE_BLACK,
@@ -425,9 +438,9 @@ public class BoardGame implements
                 CHAR_SELECT_BUTTON_WATCHER, CHAR_SELECT_PORTRAIT_WATCHER, BGWatcher.Enums.BG_WATCHER);
         logger.info("Added " + BGWatcher.Enums.BG_WATCHER.toString());
 
-        BaseMod.addCharacter(new BGRailgun("the Railgun", BGRailgun.Enums.BG_RAILGUN),
-                CHAR_SELECT_BUTTON_WATCHER, CHAR_SELECT_PORTRAIT_WATCHER, BGRailgun.Enums.BG_RAILGUN);
-        logger.info("Added " + BGRailgun.Enums.BG_RAILGUN.toString());
+        BaseMod.addCharacter(new BGJester("the Jester", BGJester.Enums.BG_JESTER),
+                CHAR_SELECT_BUTTON_JESTER, CHAR_SELECT_BUTTON_JESTER, BGJester.Enums.BG_JESTER);
+        logger.info("Added " + BGJester.Enums.BG_JESTER.toString());
 
         receiveEditPotions();
     }

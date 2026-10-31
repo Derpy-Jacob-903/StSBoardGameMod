@@ -1,8 +1,7 @@
 package BoardGame.cards.BGMint;
 
 import BoardGame.cards.AbstractBGCard;
-import BoardGame.characters.BGRailgun;
-import BoardGame.characters.BGWatcher;
+import BoardGame.characters.BGJester;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -16,11 +15,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class BGStrike_M extends AbstractBGCard {
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("BoardGame:BGStrike_W");
-    public static final String ID = "BGStrike_M";
-    public BGStrike_M() {
-        super("BGStrike_M", cardStrings.NAME, "green/attack/strike", 1, cardStrings.DESCRIPTION, CardType.ATTACK, BGRailgun.Enums.BG_MINT, CardRarity.BASIC, CardTarget.ENEMY);
+public class BGStrike_P extends AbstractBGCard {
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("BoardGame:BGStrike_P");
+    public static final String ID = "BGStrike_P";
+    public BGStrike_P() {
+        super("BGStrike_M", cardStrings.NAME, "green/attack/strike", 1, cardStrings.DESCRIPTION, CardType.ATTACK, BGJester.Enums.BG_PINK, CardRarity.BASIC, CardTarget.ENEMY);
         this.baseDamage = 1;
         this.tags.add(CardTags.STRIKE);
         this.tags.add(CardTags.STARTER_STRIKE);
@@ -47,7 +46,7 @@ public class BGStrike_M extends AbstractBGCard {
         }
     }
     public AbstractCard makeCopy() {
-        return new BGStrike_M();
+        return new BGStrike_P();
     }
 }
 

@@ -47,7 +47,7 @@ public class BGANoteForYourself
         else if(AbstractDungeon.player instanceof BGSilent) whoAmI=2;
         else if(AbstractDungeon.player instanceof BGDefect) whoAmI=3;
         else if(AbstractDungeon.player instanceof BGWatcher) whoAmI=4;
-        else if(AbstractDungeon.player instanceof BGRailgun) whoAmI=5;
+        else if(AbstractDungeon.player instanceof BGJester) whoAmI=5;
     }
 
     protected void buttonEffect(int buttonPressed) {
@@ -78,7 +78,7 @@ public class BGANoteForYourself
                 reward(whichDeckIndex);
 
                 this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
-                this.imageEventText.updateDialogOption(0, OPTIONS[5]);
+                this.imageEventText.updateDialogOption(0, OPTIONS[6]);
                 this.imageEventText.clearRemainingOptions();
                 this.screen = CUR_SCREEN.COMPLETE;
                 (AbstractDungeon.getCurrRoom()).phase = AbstractRoom.RoomPhase.COMPLETE;

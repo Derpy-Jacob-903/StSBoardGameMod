@@ -26,8 +26,6 @@ import com.megacrit.cardcrawl.vfx.combat.LightningOrbActivateEffect;
 import com.megacrit.cardcrawl.vfx.combat.LightningOrbPassiveEffect;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 
-import static BoardGame.characters.BGRailgun.Enums.ORB_DAMAGE;
-
 public class BGVolt extends CustomOrb {
     public static final String ORB_ID = "BoardGame:BGVolt";
 

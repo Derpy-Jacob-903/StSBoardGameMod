@@ -1,7 +1,7 @@
 package BoardGame.multicharacter;
 
 import BoardGame.BoardGame;
-import BoardGame.characters.BGRailgun;
+import BoardGame.characters.BGJester;
 import BoardGame.ui.OverlayMenuPatches;
 import basemod.BaseMod;
 import com.badlogic.gdx.graphics.Color;
@@ -85,8 +85,8 @@ public class MultiCharacterSelectButton {
         if(newChar instanceof Defect){
           newChar.maxOrbs=newChar.masterMaxOrbs=3;
         }
-        if(newChar instanceof BGRailgun){
-          newChar.maxOrbs=newChar.masterMaxOrbs=2;
+        if(newChar instanceof BGJester){
+          newChar.maxOrbs=newChar.masterMaxOrbs=3;
         }
         p.subcharacters.add(newChar);
         newChar.initializeStarterDeck();

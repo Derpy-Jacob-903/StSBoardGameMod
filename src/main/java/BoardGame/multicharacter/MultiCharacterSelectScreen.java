@@ -48,7 +48,7 @@ public class MultiCharacterSelectScreen extends CustomScreen {
       this.buttons.add(new MultiCharacterSelectButton("The Silent", new BGSilent("The Silent", BGSilent.Enums.BG_SILENT), "images/ui/charSelect/silentButton.png"));
       this.buttons.add(new MultiCharacterSelectButton("The Defect", new BGDefect("The Defect", BGDefect.Enums.BG_DEFECT), "images/ui/charSelect/defectButton.png"));
       this.buttons.add(new MultiCharacterSelectButton("The Watcher", new BGWatcher("The Watcher", BGWatcher.Enums.BG_WATCHER), "images/ui/charSelect/watcherButton.png"));
-      this.buttons.add(new MultiCharacterSelectButton("The Railgun", new BGRailgun("The Railgun", BGRailgun.Enums.BG_RAILGUN), "BoardGameResources/images/charSelect/TheRailgunCharacterButton.png"));
+      this.buttons.add(new MultiCharacterSelectButton("The Railgun", new BGJester("The Railgun", BGJester.Enums.BG_JESTER), "BoardGameResources/images/charSelect/TheRailgunCharacterButton.png"));
     } else {
       //Vanilla
       this.buttons.add(new MultiCharacterSelectButton("The Ironclad", BaseMod.findCharacter(AbstractPlayer.PlayerClass.IRONCLAD), "images/ui/charSelect/ironcladButton.png"));

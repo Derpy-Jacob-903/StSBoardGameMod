@@ -1,8 +1,7 @@
 package BoardGame.cards.BGMint;
 
 import BoardGame.cards.AbstractBGCard;
-import BoardGame.characters.BGRailgun;
-import BoardGame.characters.BGWatcher;
+import BoardGame.characters.BGJester;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,12 +13,12 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 //TODO: "to any player"
-public class BGDefend_M extends AbstractBGCard {
+public class BGDefend_P extends AbstractBGCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("BoardGame:BGDefend_M");
     public static final String ID = "BGDefend_M";
 
-    public BGDefend_M() {
-        super("BGDefend_M", cardStrings.NAME, "blue/skill/defend", 1, cardStrings.DESCRIPTION, CardType.SKILL, BGRailgun.Enums.BG_MINT, CardRarity.BASIC, CardTarget.SELF);
+    public BGDefend_P() {
+        super("BGDefend_M", cardStrings.NAME, "blue/skill/defend", 1, cardStrings.DESCRIPTION, CardType.SKILL, BGJester.Enums.BG_PINK, CardRarity.BASIC, CardTarget.SELF);
         this.baseBlock = 1;
         this.tags.add(CardTags.STARTER_DEFEND);
     }
@@ -42,7 +41,7 @@ public class BGDefend_M extends AbstractBGCard {
     }
 
     public AbstractCard makeCopy() {
-        return new BGDefend_M();
+        return new BGDefend_P();
     }
 }
 
