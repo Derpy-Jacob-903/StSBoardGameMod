@@ -14,29 +14,14 @@ public class BGDazed extends AbstractBGCard implements CardDisappearsOnExhaust {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("BoardGame:BGDazed");
 
     public BGDazed() {
-        super("BGDazed", cardStrings.NAME, "status/dazed", -2, cardStrings.DESCRIPTION, AbstractCard.CardType.STATUS, BGColorless.Enums.CARD_COLOR, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.NONE);
-
-
-
-
-
-
-
-
-
-
+        super("BGDazed", cardStrings.NAME, "status/dazed", -2, cardStrings.DESCRIPTION, AbstractCard.CardType.STATUS, BGColorless.Enums.CARD_COLOR, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.NONE);
         this.isEthereal = true;
         //this.purgeOnUse=true;
     }
 
-
-
     public void use(AbstractPlayer p, AbstractMonster m) {}
 
-
-
     public void upgrade() {}
-
 
     public AbstractCard makeCopy() {
         return new BGDazed();

@@ -1,9 +1,6 @@
 package BoardGame.events;
 
-import BoardGame.characters.BGDefect;
-import BoardGame.characters.BGIronclad;
-import BoardGame.characters.BGSilent;
-import BoardGame.characters.BGWatcher;
+import BoardGame.characters.*;
 import BoardGame.dungeons.AbstractBGDungeon;
 import BoardGame.relics.BGPrismaticShard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -50,6 +47,7 @@ public class BGANoteForYourself
         else if(AbstractDungeon.player instanceof BGSilent) whoAmI=2;
         else if(AbstractDungeon.player instanceof BGDefect) whoAmI=3;
         else if(AbstractDungeon.player instanceof BGWatcher) whoAmI=4;
+        else if(AbstractDungeon.player instanceof BGRailgun) whoAmI=5;
     }
 
     protected void buttonEffect(int buttonPressed) {
@@ -60,6 +58,8 @@ public class BGANoteForYourself
                 int i=0;
                 i+=1;if(i==whoAmI)i+=1;
                 this.imageEventText.updateDialogOption(0, OPTIONS[i]);
+                i+=1;if(i==whoAmI)i+=1;
+                this.imageEventText.setDialogOption(OPTIONS[i]);
                 i+=1;if(i==whoAmI)i+=1;
                 this.imageEventText.setDialogOption(OPTIONS[i]);
                 i+=1;if(i==whoAmI)i+=1;

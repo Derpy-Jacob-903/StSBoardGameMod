@@ -24,6 +24,7 @@ public class PrismaticShardVanillaPatch {
         excludedColors.add(BGSilent.Enums.BG_GREEN);
         excludedColors.add(BGDefect.Enums.BG_BLUE);
         excludedColors.add(BGWatcher.Enums.BG_PURPLE);
+        excludedColors.add(BGRailgun.Enums.BG_MINT);
         excludedColors.add(BGColorless.Enums.CARD_COLOR);
         excludedColors.add(BGCurse.Enums.BG_CURSE);
     }

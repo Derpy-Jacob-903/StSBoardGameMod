@@ -1,5 +1,6 @@
 package BoardGame.actions;
 
+import BoardGame.powers.BGLockOnPower;
 import BoardGame.screen.TargetSelectScreen;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -38,6 +39,7 @@ public class BGDarkOrbEvokeAction extends AbstractGameAction {
                         target.tint.color = Color.RED.cpy();
                         target.tint.changeColor(Color.WHITE.cpy());
                     }
+                    if (target.hasPower(BGLockOnPower.POWER_ID)) this.info.output += 1;
                     target.damage(this.info);
                     if ((AbstractDungeon.getCurrRoom()).monsters.areMonstersBasicallyDead())
                         AbstractDungeon.actionManager.clearPostCombatActions();

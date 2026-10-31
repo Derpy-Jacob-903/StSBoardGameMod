@@ -15,7 +15,7 @@ public class BGSlimed extends AbstractBGCard implements CardDisappearsOnExhaust 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Slimed");
 
     public BGSlimed() {
-        super("BGSlimed", cardStrings.NAME, "status/slimed", 1, cardStrings.DESCRIPTION, AbstractCard.CardType.STATUS, BGColorless.Enums.CARD_COLOR, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
+        super("BGSlimed", cardStrings.NAME, "status/slimed", 1, cardStrings.DESCRIPTION, AbstractCard.CardType.STATUS, BGColorless.Enums.CARD_COLOR, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.SELF);
 
 
 

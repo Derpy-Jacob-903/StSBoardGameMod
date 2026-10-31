@@ -20,17 +20,7 @@ public class BGBurn extends AbstractBGCard implements CardDisappearsOnExhaust {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("BoardGame:BGBurn");
 
     public BGBurn() {
-        super("BGBurn", cardStrings.NAME, "status/burn", -2, cardStrings.DESCRIPTION, AbstractCard.CardType.STATUS, BGColorless.Enums.CARD_COLOR, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.NONE);
-
-
-
-
-
-
-
-
-
-
+        super("BGBurn", cardStrings.NAME, "status/burn", -2, cardStrings.DESCRIPTION, AbstractCard.CardType.STATUS, BGColorless.Enums.CARD_COLOR, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.NONE);
         this.magicNumber = 1;
         this.baseMagicNumber = 1;
     }
@@ -41,11 +31,6 @@ public class BGBurn extends AbstractBGCard implements CardDisappearsOnExhaust {
             addToBot((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, new DamageInfo((AbstractCreature)AbstractDungeon.player, this.magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
         }
     }
-
-
-
-
-
 
     public void triggerOnEndOfTurnForPlayingCard() {
         this.dontTriggerOnUseCard = true;

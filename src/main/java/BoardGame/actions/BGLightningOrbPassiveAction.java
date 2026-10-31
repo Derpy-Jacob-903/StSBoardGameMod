@@ -1,5 +1,6 @@
 package BoardGame.actions;
 
+import BoardGame.powers.BGLockOnPower;
 import BoardGame.screen.TargetSelectScreen;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -31,6 +32,13 @@ public class BGLightningOrbPassiveAction extends AbstractGameAction {
         this.hitAll = hitAll;
     }
 
+    public BGLightningOrbPassiveAction(DamageInfo info, boolean hitAll) {
+        this.info = info;
+        this.actionType = AbstractGameAction.ActionType.DAMAGE;
+        this.attackEffect = AbstractGameAction.AttackEffect.NONE;
+        this.hitAll = hitAll;
+    }
+
     public void update() {
         if (!this.hitAll) {
             TargetSelectScreen.TargetSelectAction tssAction = (target) -> {
@@ -41,6 +49,7 @@ public class BGLightningOrbPassiveAction extends AbstractGameAction {
                     if (Settings.FAST_MODE)
                         speedTime = 0.0F;
                     this.info.output = AbstractOrb.applyLockOn((AbstractCreature) abstractMonster, this.info.base);
+                    if (abstractMonster.hasPower(BGLockOnPower.POWER_ID)) this.info.output += 1;
                     addToTop((AbstractGameAction) new DamageAction((AbstractCreature) abstractMonster, this.info, AbstractGameAction.AttackEffect.NONE, true));
                     addToTop((AbstractGameAction) new VFXAction((AbstractGameEffect) new LightningEffect(((AbstractCreature) abstractMonster).drawX, ((AbstractCreature) abstractMonster).drawY), speedTime));
                     addToTop((AbstractGameAction) new SFXAction("ORB_LIGHTNING_EVOKE"));

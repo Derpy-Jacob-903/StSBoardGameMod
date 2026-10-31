@@ -59,6 +59,14 @@
     "DESCRIPTION": "Orb: Deals damage to enemies."
   },
   {
+    "PROPER_NAME": "Volt",
+    "NAMES": [
+      "volt",
+      "volt+"
+    ],
+    "DESCRIPTION": "Orb: Deals damage to enemies."
+  },
+  {
   "PROPER_NAME": "Frost",
     "NAMES": [
       "frost",

@@ -1,10 +1,7 @@
 package BoardGame.multicharacter;
 
 import BoardGame.BoardGame;
-import BoardGame.characters.BGDefect;
-import BoardGame.characters.BGIronclad;
-import BoardGame.characters.BGSilent;
-import BoardGame.characters.BGWatcher;
+import BoardGame.characters.*;
 import BoardGame.ui.OverlayMenuPatches;
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
@@ -51,7 +48,8 @@ public class MultiCharacterSelectScreen extends CustomScreen {
       this.buttons.add(new MultiCharacterSelectButton("The Silent", new BGSilent("The Silent", BGSilent.Enums.BG_SILENT), "images/ui/charSelect/silentButton.png"));
       this.buttons.add(new MultiCharacterSelectButton("The Defect", new BGDefect("The Defect", BGDefect.Enums.BG_DEFECT), "images/ui/charSelect/defectButton.png"));
       this.buttons.add(new MultiCharacterSelectButton("The Watcher", new BGWatcher("The Watcher", BGWatcher.Enums.BG_WATCHER), "images/ui/charSelect/watcherButton.png"));
-    }else {
+      this.buttons.add(new MultiCharacterSelectButton("The Railgun", new BGRailgun("The Railgun", BGRailgun.Enums.BG_RAILGUN), "BoardGameResources/images/charSelect/TheRailgunCharacterButton.png"));
+    } else {
       //Vanilla
       this.buttons.add(new MultiCharacterSelectButton("The Ironclad", BaseMod.findCharacter(AbstractPlayer.PlayerClass.IRONCLAD), "images/ui/charSelect/ironcladButton.png"));
       this.buttons.add(new MultiCharacterSelectButton("The Silent", BaseMod.findCharacter(AbstractPlayer.PlayerClass.THE_SILENT), "images/ui/charSelect/silentButton.png"));

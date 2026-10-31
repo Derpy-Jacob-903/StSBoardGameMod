@@ -1,5 +1,6 @@
 package BoardGame.actions;
 
+import BoardGame.powers.BGLockOnPower;
 import BoardGame.screen.TargetSelectScreen;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -37,7 +38,9 @@ public class BGLightningOrbEvokeAction extends AbstractGameAction {
                         speedTime = 0.2F / AbstractDungeon.player.orbs.size();
                     if (Settings.FAST_MODE)
                         speedTime = 0.0F;
+
                     this.info.output = AbstractOrb.applyLockOn((AbstractCreature) abstractMonster, this.info.base);
+                    if (abstractMonster.hasPower(BGLockOnPower.POWER_ID)) this.info.output += 1;
                     addToTop((AbstractGameAction) new DamageAction((AbstractCreature) abstractMonster, this.info, AbstractGameAction.AttackEffect.NONE, true));
                     addToTop((AbstractGameAction) new VFXAction((AbstractGameEffect) new LightningEffect(((AbstractCreature) abstractMonster).drawX, ((AbstractCreature) abstractMonster).drawY), speedTime));
                     addToTop((AbstractGameAction) new SFXAction("ORB_LIGHTNING_EVOKE"));
@@ -48,6 +51,7 @@ public class BGLightningOrbEvokeAction extends AbstractGameAction {
             float speedTime = 0.2F / AbstractDungeon.player.orbs.size();
             if (Settings.FAST_MODE)
                 speedTime = 0.0F;
+            //TODO if (abstractMonster.hasPower(BGLockOnPower.POWER_ID)) this.info.output += 1;
             addToTop((AbstractGameAction)new DamageAllEnemiesAction( (AbstractCreature)AbstractDungeon.player,
                     DamageInfo.createDamageMatrix(this.info.base, true, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE));
             for (AbstractMonster m3 : (AbstractDungeon.getMonsters()).monsters) {

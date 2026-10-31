@@ -71,11 +71,6 @@ public abstract class AbstractBGCard extends CustomCard
     public boolean upgradedDefaultSecondMagicNumber; // A boolean to check whether the number has been upgraded or not.
     public boolean isDefaultSecondMagicNumberModified; // A boolean to check whether the number has been modified or not, for coloring purposes. (red/green)
 
-
-
-
-
-
     public AbstractBGCard(final String id,
                           final String name,
                           final String img,
@@ -96,6 +91,34 @@ public abstract class AbstractBGCard extends CustomCard
         isDefaultSecondMagicNumberModified = false;
         costModifiers=new HashMap<>();
     }
+
+        public static String makeID(Class<?> cardClass, String id) {
+            return "BG" + id + "_" + cardClass.getSimpleName().replace("BG", "");
+        }
+
+        public AbstractBGCard(Class<? extends AbstractBGSpendCard> cardClass,
+                              final String sufix,
+                              final int cost,
+                              final String rawDescription,
+                              final CardType type,
+                              final CardColor color,
+                              final CardRarity rarity,
+                              final CardTarget target) {
+
+            //super(id, name, "images/1024Portraits/"+img+".png", cost, rawDescription, type, color, rarity, target);
+            super("BG" + sufix + "_" + cardClass.getSimpleName().replace("BG", ""),
+                    CardCrawlGame.languagePack.getCardStrings("BoardGame:BG" + sufix + "_" + cardClass.getSimpleName().replace("BG", "")).NAME,
+                    "green/attack/strike"//"BoardGameResources/images/cards/" + "/" + ""
+                    , cost,
+                    CardCrawlGame.languagePack.getCardStrings("BoardGame:BG" + sufix + "_" + cardClass.getSimpleName().replace("BG", "")).DESCRIPTION, type, color, rarity, target);
+            //CustomCard tries to override this, so override it right back
+            this.assetUrl="green/attack/strike";
+
+            this.nonvolatileBaseCost =cost;
+
+            isDefaultSecondMagicNumberModified = false;
+            costModifiers=new HashMap<>();
+        }
 
     static {
         imgMap = new HashMap<>();

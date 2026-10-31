@@ -25,7 +25,7 @@
   },
   "BoardGame:BGAllForOne": {
     "NAME": "All for One",
-    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL Put all 0 cost cards from your discard pile into your hand."
+    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL Put all 0 cost cards from your Discard Pile into your Hand."
   },
   "BoardGame:BGAllOutAttack": {
     "NAME": "All-Out Attack",
@@ -33,7 +33,7 @@
   },
   "BoardGame:BGAnger": {
     "NAME": "Anger",
-    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL Put this card on top of your draw pile."
+    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL Put this card on top of your Draw Pile."
   },
   "BoardGame:BGApotheosis": {
     "NAME": "Apotheosis",
@@ -45,7 +45,7 @@
   },
   "BoardGame:BGAThousandCuts": {
     "NAME": "A Thousand Cuts",
-    "DESCRIPTION": "Whenever you shuffle your draw pile, deal !M! damage to any row."
+    "DESCRIPTION": "Whenever you shuffle your Draw Pile, deal !M! damage to any row."
   },
   "BoardGame:BGBackflip": {
     "NAME": "Backflip",
@@ -58,6 +58,10 @@
   "BoardGame:BGBallLightning": {
     "NAME": "Ball Lightning",
     "DESCRIPTION": "!D! [BoardGame:HitIcon] NL BoardGame:Channel 1 BoardGame:Lightning."
+  },
+  "BoardGame:BGBallLightning_Mint": {
+    "NAME": "Ball Lightning",
+    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL BoardGame:Channel 1 [BoardGame:RGLightningOrb] ."
   },
   "BoardGame:BGBane": {
     "NAME": "Bane",
@@ -90,15 +94,20 @@
     "NAME": "Berserk",
     "DESCRIPTION": "Whenever you Exhaust a card, NL deal !M! damage to any row."
   },
+  "BoardGame:BGTeleporter": {
+    "NAME": "Teleporter",
+    "DESCRIPTION": "[BoardGame:ShivIcon] [BoardGame:ShivIcon] [BoardGame:ShivIcon] NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "[BoardGame:ShivIcon] [BoardGame:ShivIcon] [BoardGame:ShivIcon]"
+  },
   "BoardGame:BGBladeDance": {
     "NAME": "Blade Dance",
-    "DESCRIPTION": "[BoardGame:ShivIcon] [BoardGame:ShivIcon]",
+    "DESCRIPTION": "[BoardGame:ShivIcon] [BoardGame:ShivIcon] Eh",
     "UPGRADE_DESCRIPTION": "[BoardGame:ShivIcon] [BoardGame:ShivIcon] [BoardGame:ShivIcon]"
   },
   "BoardGame:BGBlasphemy": {
     "NAME": "Blasphemy",
-    "DESCRIPTION": "Your next Attack this turn is played 3 times. NL Exhaust your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Your next Attack this turn is played 3 times. NL Exhaust your draw pile. NL Exhaust."
+    "DESCRIPTION": "Your next Attack this turn is played 3 times. NL Exhaust your Draw Pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Your next Attack this turn is played 3 times. NL Exhaust your Draw Pile. NL Exhaust."
   },
   "BoardGame:BGBlind": {
     "NAME": "Blind",
@@ -196,14 +205,14 @@
   },
   "BoardGame:BGClash": {
     "NAME": "Clash",
-    "DESCRIPTION": "Can only be played if every card in your hand is an Attack. NL !D! [BoardGame:HitIcon]",
+    "DESCRIPTION": "Can only be played if every card in your Hand is an Attack. NL !D! [BoardGame:HitIcon]",
     "EXTENDED_DESCRIPTION": [
-      "I have non-Attack cards in my hand."
+      "I have non-Attack cards in my Hand."
     ]
   },
   "BoardGame:BGClaw": {
     "NAME": "Claw",
-    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL +!M! damage if the topmost card in your discard pile costs 0."
+    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL +!M! damage if the topmost card in your Discard Pile costs 0."
   },
   "BoardGame:BGClaw2": {
     "NAME": "Claw",
@@ -329,7 +338,7 @@
   },
   "BoardGame:BGDecay": {
     "NAME": "Decay",
-    "DESCRIPTION": "Unplayable. NL [#EFC851]End [#EFC851]of [#EFC851]turn[]: NL If this card is in your hand, take 1 damage."
+    "DESCRIPTION": "Unplayable. NL [#EFC851]End [#EFC851]of [#EFC851]turn[]: NL If this card is in your Hand, take 1 damage."
   },
   "BoardGame:BGDefend_B": {
     "NAME": "Defend",
@@ -347,6 +356,11 @@
     "UPGRADE_DESCRIPTION": "!B! [BoardGame:BlockIcon] to any player."
   },
   "BoardGame:BGDefend_W": {
+    "NAME": "Defend",
+    "DESCRIPTION": "!B! [BoardGame:BlockIcon]",
+    "UPGRADE_DESCRIPTION": "!B! [BoardGame:BlockIcon] to any player."
+  },
+  "BoardGame:BGDefend_M": {
     "NAME": "Defend",
     "DESCRIPTION": "!B! [BoardGame:BlockIcon]",
     "UPGRADE_DESCRIPTION": "!B! [BoardGame:BlockIcon] to any player."
@@ -435,7 +449,7 @@
   },
   "BoardGame:BGDoubt": {
     "NAME": "Doubt",
-    "DESCRIPTION": "Unplayable. NL [#EFC851]End [#EFC851]of [#EFC851]turn[]: NL If this card is in your hand, gain [BoardGame:WeakIcon] ."
+    "DESCRIPTION": "Unplayable. NL [#EFC851]End [#EFC851]of [#EFC851]turn[]: NL If this card is in your Hand, gain [BoardGame:WeakIcon] ."
   },
   "BoardGame:BGDramatic Entrance": {
     "NAME": "Dramatic Entrance",
@@ -530,7 +544,7 @@
   },
   "BoardGame:BGFiendFire": {
     "NAME": "Fiend Fire",
-    "DESCRIPTION": "Exhaust your hand. NL Deal !D! [BoardGame:HitIcon] for each other card Exhausted this way. NL Exhaust."
+    "DESCRIPTION": "Exhaust your Hand. NL Deal !D! [BoardGame:HitIcon] for each other card Exhausted this way. NL Exhaust."
   },
   "BoardGame:BGFinesse": {
     "NAME": "Finesse",
@@ -566,8 +580,8 @@
   },
   "BoardGame:BGFlechettes": {
     "NAME": "Flechettes",
-    "DESCRIPTION": "Deal !D! [BoardGame:HitIcon] for each Skill in your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! [BoardGame:HitIcon] for each Skill in your hand +!M!.",
+    "DESCRIPTION": "Deal !D! [BoardGame:HitIcon] for each Skill in your Hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! [BoardGame:HitIcon] for each Skill in your Hand +!M!.",
     "EXTENDED_DESCRIPTION": [
       " NL (You have ",
       " Skill).",
@@ -643,7 +657,7 @@
   },
   "BoardGame:BGGrandFinale": {
     "NAME": "Grand Finale",
-    "DESCRIPTION": "Can only be played if there are no cards in your draw pile. NL [BoardGame:AOEIcon] !D! [BoardGame:HitIcon]"
+    "DESCRIPTION": "Can only be played if there are no cards in your Draw Pile. NL [BoardGame:AOEIcon] !D! [BoardGame:HitIcon]"
   },
   "BoardGame:BGGremlinHornDrawACard": {
     "NAME": "Versatility",
@@ -671,7 +685,7 @@
   },
   "BoardGame:BGHeadbutt": {
     "NAME": "Headbutt",
-    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL Put a card from your discard pile on top of your draw pile."
+    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL Put a card from your Discard Pile on top of your Draw Pile."
   },
   "BoardGame:BGHeatsinks": {
     "NAME": "Heatsinks",
@@ -685,8 +699,12 @@
   },
   "BoardGame:BGHologram": {
     "NAME": "Hologram",
-    "DESCRIPTION": "!B! [BoardGame:BlockIcon] NL Put a card from your discard pile into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "!B! [BoardGame:BlockIcon] NL Put a card from your discard pile into your hand."
+    "DESCRIPTION": "!B! [BoardGame:BlockIcon] NL Put a card from your Discard Pile into your Hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "!B! [BoardGame:BlockIcon] NL Put a card from your Discard Pile into your Hand."
+  },
+  "BoardGame:BGTokenCollection": {
+    "NAME": "Token Collection",
+    "DESCRIPTION": "Put !M! cards from your Discard Pile into your Hand."
   },
   "BoardGame:BGHyperbeam": {
     "NAME": "Hyperbeam",
@@ -795,8 +813,8 @@
   },
   "BoardGame:BGMeditate": {
     "NAME": "Meditate",
-    "DESCRIPTION": "Put !M! card from your discard pile into your hand and Retain it. NL Enter BoardGame:Calm. NL You can't play additional cards this turn.",
-    "UPGRADE_DESCRIPTION": "Put !M! cards from your discard pile into your hand and Retain them. NL Enter BoardGame:Calm. NL You can't play additional cards this turn."
+    "DESCRIPTION": "Put !M! card from your Discard Pile into your Hand and Retain it. NL Enter BoardGame:Calm. NL You can't play additional cards this turn.",
+    "UPGRADE_DESCRIPTION": "Put !M! cards from your Discard Pile into your Hand and Retain them. NL Enter BoardGame:Calm. NL You can't play additional cards this turn."
   },
   "BoardGame:BGMelter": {
     "NAME": "Melter",
@@ -816,8 +834,8 @@
   },
   "BoardGame:BGMind Blast": {
     "NAME": "Mind Blast",
-    "DESCRIPTION": "X [BoardGame:HitIcon] NL X is the number of other cards in your hand.",
-    "UPGRADE_DESCRIPTION": "X+1 [BoardGame:HitIcon] NL X is the number of other cards in your hand.",
+    "DESCRIPTION": "X [BoardGame:HitIcon] NL X is the number of other cards in your Hand.",
+    "UPGRADE_DESCRIPTION": "X+1 [BoardGame:HitIcon] NL X is the number of other cards in your Hand.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)"
     ]
@@ -858,7 +876,7 @@
   },
   "BoardGame:BGOmniscience": {
     "NAME": "Omniscience",
-    "DESCRIPTION": "Search your draw pile for an Attack or Skill. Play the card twice for 0 Energy and Exhaust it. Shuffle your draw pile. NL Exhaust."
+    "DESCRIPTION": "Search your Draw Pile for an Attack or Skill. Play the card twice for 0 Energy and Exhaust it. Shuffle your Draw Pile. NL Exhaust."
   },
   "BoardGame:BGOutmaneuver": {
     "NAME": "Outmaneuver",
@@ -867,7 +885,7 @@
   },
   "BoardGame:BGOverclock": {
     "NAME": "Overclock",
-    "DESCRIPTION": "Draw !M! cards. NL Put a [BoardGame:FakeDazedIcon] in your discard pile."
+    "DESCRIPTION": "Draw !M! cards. NL Put a [BoardGame:FakeDazedIcon] in your Discard Pile."
   },
   "BoardGame:BGPanacea": {
     "NAME": "Panacea",
@@ -876,11 +894,11 @@
   },
   "BoardGame:BGPain": {
     "NAME": "Pain",
-    "DESCRIPTION": "Unplayable. NL [#EFC851]End [#EFC851]of [#EFC851]turn[]: NL If 2 or fewer cards are in your hand, lose 1 HP."
+    "DESCRIPTION": "Unplayable. NL [#EFC851]End [#EFC851]of [#EFC851]turn[]: NL If 2 or fewer cards are in your Hand, lose 1 HP."
   },
   "BoardGame:BGPanache": {
     "NAME": "Panache",
-    "DESCRIPTION": "[#EFC851]End [#EFC851]of [#EFC851]turn[]: NL If your hand is empty, deal !M! damage to any row."
+    "DESCRIPTION": "[#EFC851]End [#EFC851]of [#EFC851]turn[]: NL If your Hand is empty, deal !M! damage to any row."
   },
   "BoardGame:BGParasite": {
     "NAME": "Parasite",
@@ -888,8 +906,8 @@
   },
   "BoardGame:BGPerfected Strike": {
     "NAME": "Perfected Strike",
-    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL +!M! damage for each other card in your hand containing \"Strike\".",
-    "UPGRADE_DESCRIPTION": "!D! [BoardGame:HitIcon] NL +!M! damage for each other card in your hand containing \"Strike\"."
+    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL +!M! damage for each other card in your Hand containing \"Strike\".",
+    "UPGRADE_DESCRIPTION": "!D! [BoardGame:HitIcon] NL +!M! damage for each other card in your Hand containing \"Strike\"."
   },
   "BoardGame:BGPerseverance": {
     "NAME": "Perseverance",
@@ -932,7 +950,7 @@
   },
   "BoardGame:BGRage": {
     "NAME": "Rage",
-    "DESCRIPTION": "!B! [BoardGame:BlockIcon] for each Attack in your hand."
+    "DESCRIPTION": "!B! [BoardGame:BlockIcon] for each Attack in your Hand."
   },
   "BoardGame:BGRagnarok": {
     "NAME": "Ragnarok",
@@ -946,8 +964,8 @@
   },
   "BoardGame:BGRampage": {
     "NAME": "Rampage",
-    "DESCRIPTION": "X [BoardGame:HitIcon] NL X is the # of cards in your Exhaust pile.",
-    "UPGRADE_DESCRIPTION": "Exhaust a card. NL X [BoardGame:HitIcon] NL X is the # of cards in your Exhaust pile.",
+    "DESCRIPTION": "X [BoardGame:HitIcon] NL X is the # of cards in your Exhaust Pile.",
+    "UPGRADE_DESCRIPTION": "Exhaust a card. NL X [BoardGame:HitIcon] NL X is the # of cards in your Exhaust Pile.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)",
       " NL (Deals at least !D! damage.)"
@@ -1008,7 +1026,7 @@
   },
   "BoardGame:BGSandsOfTime": {
     "NAME": "Sands of Time",
-    "DESCRIPTION": "Retain. NL !D! [BoardGame:HitIcon] NL +!M! damage for each other card with Retain in your hand."
+    "DESCRIPTION": "Retain. NL !D! [BoardGame:HitIcon] NL +!M! damage for each other card with Retain in your Hand."
   },
   "BoardGame:BGSashWhip": {
     "NAME": "Sash Whip",
@@ -1017,7 +1035,7 @@
   },
   "BoardGame:BGScrape": {
     "NAME": "Scrape",
-    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL If the topmost card in your discard pile costs 0, return it to your hand."
+    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL If the topmost card in your Discard Pile costs 0, return it to your Hand."
   },
   "BoardGame:BGScrawl": {
     "NAME": "Scrawl",
@@ -1025,12 +1043,12 @@
   },
   "BoardGame:BGSecondWind": {
     "NAME": "Second Wind",
-    "DESCRIPTION": "Exhaust all non-Attack cards in your hand. NL Gain !B! [BoardGame:BlockIcon] for each card Exhausted this way."
+    "DESCRIPTION": "Exhaust all non-Attack cards in your Hand. NL Gain !B! [BoardGame:BlockIcon] for each card Exhausted this way."
   },
   "BoardGame:BGSeek": {
     "NAME": "Seek",
-    "DESCRIPTION": "Search your draw pile for !M! card. Put that card into your hand, then shuffle your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Search your draw pile for !M! cards. Put those cards into your hand, then shuffle your draw pile. NL Exhaust."
+    "DESCRIPTION": "Search your Draw Pile for !M! card. Put that card into your Hand, then shuffle your Draw Pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Search your Draw Pile for !M! cards. Put those cards into your Hand, then shuffle your Draw Pile. NL Exhaust."
   },
   "BoardGame:BGSentinel": {
     "NAME": "Sentinel",
@@ -1044,12 +1062,12 @@
   },
   "BoardGame:BGSever Soul": {
     "NAME": "Sever Soul",
-    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL Exhaust 1 card NL in your hand.",
-    "UPGRADE_DESCRIPTION": "!D! [BoardGame:HitIcon] NL Exhaust 1 or 2 cards NL in your hand."
+    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL Exhaust 1 card NL in your Hand.",
+    "UPGRADE_DESCRIPTION": "!D! [BoardGame:HitIcon] NL Exhaust 1 or 2 cards NL in your Hand."
   },
   "BoardGame:BGShame": {
     "NAME": "Shame",
-    "DESCRIPTION": "Unplayable. NL [#EFC851]End [#EFC851]of [#EFC851]turn[]: NL If this card is in your hand, lose 1 [BoardGame:BlockIcon] ."
+    "DESCRIPTION": "Unplayable. NL [#EFC851]End [#EFC851]of [#EFC851]turn[]: NL If this card is in your Hand, lose 1 [BoardGame:BlockIcon] ."
   },
   "BoardGame:BGShivsDiscardExtraShiv": {
     "NAME": "Discard",
@@ -1087,7 +1105,7 @@
   },
   "BoardGame:BGSignatureMove": {
     "NAME": "Signature Move",
-    "DESCRIPTION": "Can only be played if this is the only Attack in your hand. NL !D! [BoardGame:HitIcon]"
+    "DESCRIPTION": "Can only be played if this is the only Attack in your Hand. NL !D! [BoardGame:HitIcon]"
   },
   "BoardGame:BGSimmeringFury": {
     "NAME": "Simmering Fury",
@@ -1112,7 +1130,7 @@
   },
   "BoardGame:BGSneckoEyeGainDazed": {
     "NAME": "Recklessness",
-    "DESCRIPTION": "Put a *Dazed on top of your draw pile."
+    "DESCRIPTION": "Put a *Dazed on top of your Draw Pile."
   },
   "BoardGame:BGSpot Weakness": {
     "NAME": "Spot Weakness",
@@ -1142,8 +1160,8 @@
   },
   "BoardGame:BGSpiritShield": {
     "NAME": "Spirit Shield",
-    "DESCRIPTION": "!B! [BoardGame:BlockIcon] for each card in your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "!B! [BoardGame:BlockIcon] for each card in your hand.",
+    "DESCRIPTION": "!B! [BoardGame:BlockIcon] for each card in your Hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "!B! [BoardGame:BlockIcon] for each card in your Hand.",
     "EXTENDED_DESCRIPTION": [
       " NL (Gain !M! Block.)"
     ]
@@ -1155,7 +1173,7 @@
   },
   "BoardGame:BGSteamBarrier":{
     "NAME": "Steam Barrier",
-    "DESCRIPTION": "!B! [BoardGame:BlockIcon] NL +!M! [BoardGame:BlockIcon] if the topmost card of your discard pile costs 0."
+    "DESCRIPTION": "!B! [BoardGame:BlockIcon] NL +!M! [BoardGame:BlockIcon] if the topmost card of your Discard Pile costs 0."
   },
   "BoardGame:BGStorm": {
     "NAME": "Storm",
@@ -1178,6 +1196,10 @@
     "DESCRIPTION": "!D! [BoardGame:HitIcon]"
   },
   "BoardGame:BGStrike_W": {
+    "NAME": "Strike",
+    "DESCRIPTION": "!D! [BoardGame:HitIcon]"
+  },
+  "BoardGame:BGStrike_M": {
     "NAME": "Strike",
     "DESCRIPTION": "!D! [BoardGame:HitIcon]"
   },
@@ -1208,8 +1230,8 @@
   },
   "BoardGame:BGTantrum": {
     "NAME": "Tantrum",
-    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL Enter BoardGame:Wrath. NL Put this card on top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "!D! [BoardGame:HitIcon] !D! [BoardGame:HitIcon] NL Enter BoardGame:Wrath. NL Put this card on top of your draw pile."
+    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL Enter BoardGame:Wrath. NL Put this card on top of your Draw Pile.",
+    "UPGRADE_DESCRIPTION": "!D! [BoardGame:HitIcon] !D! [BoardGame:HitIcon] NL Enter BoardGame:Wrath. NL Put this card on top of your Draw Pile."
   },
   "BoardGame:BGTempest": {
     "NAME": "Tempest",
@@ -1262,7 +1284,7 @@
   },
   "BoardGame:BGThinking Ahead": {
     "NAME": "Thinking Ahead",
-    "DESCRIPTION": "Draw !M! cards. NL Then put a card from your hand on top of your draw pile. NL Exhaust."
+    "DESCRIPTION": "Draw !M! cards. NL Then put a card from your Hand on top of your Draw Pile. NL Exhaust."
   },
   "BoardGame:BGThirdEye": {
     "NAME": "Third Eye",
@@ -1283,13 +1305,13 @@
   },
   "BoardGame:BGTrue Grit": {
     "NAME": "True Grit",
-    "DESCRIPTION": "!B! [BoardGame:BlockIcon] to any player. NL Exhaust a card in your hand.",
-    "UPGRADE_DESCRIPTION": "!B! [BoardGame:BlockIcon] to any player. NL Exhaust a card in your hand."
+    "DESCRIPTION": "!B! [BoardGame:BlockIcon] to any player. NL Exhaust a card in your Hand.",
+    "UPGRADE_DESCRIPTION": "!B! [BoardGame:BlockIcon] to any player. NL Exhaust a card in your Hand."
   },
   "BoardGame:BGTURBO": {
     "NAME": "TURBO",
-    "DESCRIPTION": "Gain [B] [B]. NL Put a [BoardGame:FakeDazedIcon] in your discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain [B] [B] [B]. NL Put a [BoardGame:FakeDazedIcon] in your discard pile. NL Exhaust."
+    "DESCRIPTION": "Gain [B] [B]. NL Put a [BoardGame:FakeDazedIcon] in your Discard Pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [B] [B] [B]. NL Put a [BoardGame:FakeDazedIcon] in your Discard Pile. NL Exhaust."
   },
   "BoardGame:BGTwin Strike": {
     "NAME": "Twin Strike",
@@ -1322,8 +1344,8 @@
   },
   "BoardGame:BGWarcry": {
     "NAME": "Warcry",
-    "DESCRIPTION": "Draw !M! cards. NL Then put a card from your hand onto the top of your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Then put a card from your hand onto the top of your draw pile. NL Exhaust."
+    "DESCRIPTION": "Draw !M! cards. NL Then put a card from your Hand onto the top of your Draw Pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Then put a card from your Hand onto the top of your Draw Pile. NL Exhaust."
   },
   "BoardGame:BGWeave": {
     "NAME": "Weave",
@@ -1382,5 +1404,239 @@
   "BoardGame:BGZap":{
     "NAME": "Zap",
     "DESCRIPTION": "BoardGame:Channel 1 BoardGame:Lightning."
+  },
+  "BoardGame:BGRailgun_ElectronBurst":{
+    "NAME": "Electron Burst",
+    "DESCRIPTION": "1 [BoardGame:OrbHitIcon] for each BoardGame:Volt Orb you have. NL 1 [BoardGame:OrbHitIcon] 1 [BoardGame:OrbHitIcon] for each BoardGame:Lightning Orb you have."
+  },
+  "BoardGame:BGRailgun_Tap":{
+    "NAME": "Tap",
+    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL !M! [BoardGame:LockOn]"
+  },
+  "BoardGame:BGRailgun_Static":{
+    "NAME": "Static",
+    "DESCRIPTION": "[BoardGame:AOEIcon] !D! [BoardGame:HitIcon] NL !M! [BoardGame:LockOn] ."
+  },
+  "BoardGame:BGRailgun_Crack":{
+    "NAME": "Crack",
+    "DESCRIPTION": "Discharge. NL !D! [BoardGame:HitIcon] NL Evoke an Orb."
+  },
+  "BoardGame:BGRailgun_StunShock":{
+    "NAME": "Stun-Shock",
+    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL [BoardGame:WeakIcon] ."
+  },
+  "BoardGame:BGRailgun_SparkArc":{
+    "NAME": "Spark-Arc",
+    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL Exhaust 1 card."
+  },
+  "BoardGame:BGRailgun_Thunderbolt":{
+    "NAME": "Thunderbolt",
+    "DESCRIPTION": "Retain. NL !D! [BoardGame:HitIcon] ."
+  },
+  "BoardGame:BGRailgun_FusionBolt":{
+    "NAME": "Fusion Bolt",
+    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL +1 damage for each card that Spend Orbs in your Hand."
+  },
+  "BoardGame:BGRailgun_Charge":{
+    "NAME": "Charge",
+    "DESCRIPTION": "Exhaust a Card. NL Channel !M! Volt."
+  },
+  "BoardGame:BGRailgun_BatteryPack":{
+    "NAME": "Battery Pack",
+    "DESCRIPTION": "Spend 1 Orb. NL Channel !M! Lightning."
+  },
+  "BoardGame:BGRailgun_GekotaPhone":{
+    "NAME": "Gekota Phone",
+    "DESCRIPTION": "Draw !M! card. NL Exhaust !M! card. "
+  },
+  "BoardGame:BGRailgun_BallLightning":{
+    "NAME": "Ball Lightning",
+    "DESCRIPTION": "!D! [BoardGame:HitIcon] NL Channel 1 Volt."
+  },
+  "BoardGame:BGRailgun_Zip":{
+    "NAME": "Zip",
+    "DESCRIPTION": "!B! [BoardGame:BlockIcon] NL Channel 1 Volt."
+  },
+  "BoardGame:BGRailgun_Spark":{
+    "NAME": "Spark",
+    "DESCRIPTION": "!B! [BoardGame:BlockIcon] for each Orb you have."
+  },
+  "BoardGame:BGRailgun_PositiveField":{
+    "NAME": "Positive Field",
+    "DESCRIPTION": "!B! [BoardGame:BlockIcon] . NL !M! [BoardGame:LockOn] ."
+  },
+  "BoardGame:BGRailgun_Push":{
+    "NAME": "Push",
+    "DESCRIPTION": "!D! [BoardGame:HitIcon] . NL Discard !M2! card."
+  },
+  "BoardGame:BGRailgun_ZapSap":{
+    "NAME": "Zap-Sap",
+    "DESCRIPTION": "Discard !M2! card. !M! Weak."
+  },
+  "BoardGame:BGRailgun_ElectricalFire":{
+    "NAME": "Electrical Fire",
+    "DESCRIPTION": "Discharge NL [BoardGame:AOEIcon] !D! [BoardGame:HitIcon] . NL Exhaust !M! card."
+  },
+  "BoardGame:BGRailgun_Electrokinesis":{
+    "NAME": "Electrokinesis",
+    "DESCRIPTION": "Spend 1 Lightning. !D! [BoardGame:HitIcon] ."
+  },
+  "BoardGame:BGRailgun_LockOn":{
+    "NAME": "Lock-On",
+    "DESCRIPTION": "!D! [BoardGame:HitIcon] . NL !M! [BoardGame:LockOn] ."
+  },
+  "BoardGame:BGRailgun_ChannelStrike":{
+    "NAME": "Channel Strike",
+    "DESCRIPTION": "1 [ATK] NL If this is the first card you played this turn, Channel 1 Volt."
+  },
+  "BoardGame:BGRailgun_Biribiri":{
+    "NAME": "Biribiri!",
+    "DESCRIPTION": "Spend 2 Orbs. Gain [BoardGame:StrIcon] ."
+  },
+  "BoardGame:BGRailgun_Circuitous":{
+    "NAME": "Circuitous",
+    "DESCRIPTION": "Spend 1. Volt and Lightning Evoke effects get +1."
+  },
+  "BoardGame:BGRailgun_Grounding":{
+    "NAME": "Grounding",
+    "DESCRIPTION": "Start of Turn: [LockOn]"
+  },
+  "BoardGame:BGRailgun_ConservePower":{
+    "NAME": "Conserve Power",
+    "DESCRIPTION": "Once per Turn: When you Spend Orbs, Channel 1 Volt."
+  },
+  "BoardGame:BGRailgun_Oneesama":{
+    "NAME": "Oneesama!!",
+    "DESCRIPTION": "When played, discard 1 card. Your [Shiv] deals +1 damage. Start of Turn: [Shiv]"
+  },
+  "BoardGame:BGRailgun_Heroinism":{
+    "NAME": "Heroinism",
+    "DESCRIPTION": "[#EFC851]Start [#EFC851]of [#EFC851]turn[]: NL Gain [E]."
+  },
+  "BoardGame:BGRailgun_CoinFlip":{
+    "NAME": "Coin Flip",
+    "DESCRIPTION": "Discharge. Channel 2 Volt. Draw 1 card."
+  },
+  "BoardGame:BGRailgun_IronDustSword":{
+    "NAME": "Iron-Dust Sword",
+    "DESCRIPTION": "[shiv] [shiv] [shiv] [shiv]"
+  },
+  "BoardGame:BGRailgun_Pull":{
+    "NAME": "Pull",
+    "DESCRIPTION": "Discharge. Draw 1. [BoardGame:VulnIcon] "
+  },
+  "BoardGame:BGRailgun_ParticleWall":{
+    "NAME": "Particle Wall",
+    "DESCRIPTION": "Spend 1 Orb. 2 [Block]. Return this card to your hand."
+  },
+  "BoardGame:BGRailgun_Teleporter Two":{
+    "NAME": "Teleporter Two",
+    "DESCRIPTION": "Discard 2 or 3 cards. [Shiv] [Shiv]",
+    "UPGRADE_DESCRIPTION": "Discard 2 or 3 cards. [Shiv] [Shiv] [Shiv]"
+  },
+  "BoardGame:BGRailgun_SisterNetwork":{
+    "NAME": "Sister Network",
+    "DESCRIPTION": "Draw X+1 cards. X is the number of enemies in your row. Evoke an Orb."
+  },
+  "BoardGame:BGRailgun_CircuitBreaker":{
+    "NAME": "Circuit Breaker",
+    "DESCRIPTION": "Spend 1 Orb. [LockOn] [LockOn]"
+  },
+  "BoardGame:BGRailgun_Hypercharge":{
+    "NAME": "Hypercharge",
+    "DESCRIPTION": "Draw !M! cards. Discard !M! cards."
+  },
+  "BoardGame:BGRailgun_TokenCollection":{
+    "NAME": "Token Collection",
+    "DESCRIPTION": "Put !M! card from your Discard Pile into your Hand."
+  },
+  "BoardGame:BGRailgun_Taser":{
+    "NAME": "Taser",
+    "DESCRIPTION": "Spend 2 NL [BoardGame:WeakIcon] [BoardGame:WeakIcon] . NL Exhaust."
+  },
+  "BoardGame:BGRailgun_Absorb":{
+    "NAME": "Absorb",
+    "DESCRIPTION": "Evoke an Orb. NL Exhaust. NL When this card is Exhausted, gain [BoardGame:StrIcon] ."
+  },
+  "BoardGame:BGRailgun_Electric Fence":{
+    "NAME": "Electric Fence",
+    "DESCRIPTION": "!B! [BoardGame:BlockIcon] NL Deal !M! damage to all enemies that intend to attack you for each [BoardGame:HitIcon] in their next action."
+  },
+  "BoardGame:BGRailgun_Tempest":{
+    "NAME": "Tempest",
+    "DESCRIPTION": "Channel X(+1) Lightning."
+  },
+  "BoardGame:BGRailgun_Electrical Storm":{
+    "NAME": "Electrical Storm",
+    "DESCRIPTION": "[BoardGame:AOEIcon] X [BoardGame:HitIcon] X [BoardGame:LockOn]."
+  },
+  "BoardGame:BGRailgun_Railgun":{
+    "NAME": "Railgun",
+    "DESCRIPTION": "BoardGame:Railgun_Spend 2. NL !D! [BoardGame:HitIcon]"
+  },
+  "BoardGame:BGRailgun_Thundervolt":{
+    "NAME": "Thundervolt",
+    "DESCRIPTION": "BoardGame:Railgun_Discharge. NL !D! [BoardGame:HitIcon] [BoardGame:WeakIcon] [BoardGame:WeakIcon] [BoardGame:VulnIcon]."
+  },
+  "BoardGame:BGRailgun_ScatterRailgun":{
+    "NAME": "Scatter Railgun",
+    "DESCRIPTION": "BoardGame:Railgun_Spend 2. NL [BoardGame:AOEIcon] !D! [BoardGame:HitIcon]"
+  },
+  "BoardGame:BGRailgun_LightningSpeed":{
+    "NAME": "Lightning Speed",
+    "DESCRIPTION": "Exhaust a card. NL !D! [BoardGame:HitIcon]. NL Put the Exhausted card on top of your draw pile."
+  },
+  "BoardGame:BGRailgun_ProtonShower":{
+    "NAME": "Proton Shower",
+    "DESCRIPTION": "BoardGame:Railgun_Spend 1. !D! [BoardGame:HitIcon] NL !D! [BoardGame:HitIcon] for each card that BoardGame:Railgun_Spend Orbs in your Hand."
+  },
+  "BoardGame:BGRailgun_LevelSix":{
+    "NAME": "Level 6",
+    "DESCRIPTION": "When played, BoardGame:Railgun_Spend 2. NL Your orbs are Evoked twice as many times. NL End of Turn: Lose 1 HP."
+  },
+  "BoardGame:BGRailgun_Overload":{
+    "NAME": "Overload",
+    "DESCRIPTION": "All cards cost !M! less [E]. End of Turn: Take !M2! damage."
+  },
+  "BoardGame:BGRailgun_MagneticFlight":{
+    "NAME": "Magnetic Flight",
+    "DESCRIPTION": "Whenever you BoardGame:Spend Orbs, !M! [BoardGame:BlockIcon]."
+  },
+  "BoardGame:BGRailgun_Rewiring":{
+    "NAME": "Rewiring",
+    "DESCRIPTION": "Gain an Orb slot. Channel !M! Volt."
+  },
+  "BoardGame:BGRailgun_Adapt":{
+    "NAME": "Adapt",
+    "DESCRIPTION": "Once per Turn: BoardGame:Railgun_Spend 1 Orb, Channel 1 Lightning or 2 [BoardGame:BlockIcon]."
+  },
+  "BoardGame:BGRailgun_Electrodynamics":{
+    "NAME": "Electrodynamics",
+    "DESCRIPTION": "Volt and Lightning deal damage to any row instead of a single target."
+  },
+  "BoardGame:BGRailgun_Recharge":{
+    "NAME": "Recharge",
+    "DESCRIPTION": "Discard 1 card. Gain [E] [E]."
+  },
+  "BoardGame:BGRailgun_JudgementOfficer":{
+    "NAME": "Judgement Officer",
+    "DESCRIPTION": "BoardGame:Railgun_Discharge. [BoardGame:ShivIcon] [BoardGame:ShivIcon] [BoardGame:ShivIcon] [BoardGame:ShivIcon] [BoardGame:ShivIcon] [BoardGame:ShivIcon]"
+  },
+  "BoardGame:BGRailgun_Fisslie":{
+    "NAME": "Fisslie",
+    "DESCRIPTION": "Remove all your Orbs. Gain [E] [E] for each Orb removed. Exhuast.",
+    "UPGRADE_DESCRIPTION": "Remove all your Orbs. Gain [E] [E] [E] for each Orb removed. Exhuast."
+  },
+  "BoardGame:BGRailgun_Gekotamania":{
+    "NAME": "Gekotamania",
+    "DESCRIPTION": "Draw 3+X cards. X is the number of Upgraded cards in your hand."
+  },
+  "BoardGame:BGRailgun_Indignation":{
+    "NAME": "Indignation",
+    "DESCRIPTION": "If you have no empty Orb Slots, [BoardGame:AOEIcon] [BoardGame:LockOnIcon] [BoardGame:LockOnIcon] , otherwise Channel 2 Lightning."
+  },
+  "BoardGame:BGRailgun_MentalOut":{
+    "NAME": "Mental Out",
+    "DESCRIPTION": "Ethereal. [BoardGame:WeakIcon] [BoardGame:WeakIcon] [BoardGame:WeakIcon] Exhaust."
   }
 }

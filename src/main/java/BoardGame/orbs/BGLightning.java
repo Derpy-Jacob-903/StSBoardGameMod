@@ -19,11 +19,14 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.LockOnPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import com.megacrit.cardcrawl.vfx.combat.LightningOrbActivateEffect;
 import com.megacrit.cardcrawl.vfx.combat.LightningOrbPassiveEffect;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
+
+import static BoardGame.characters.BGRailgun.Enums.ORB_DAMAGE;
 
 public class BGLightning extends CustomOrb {
     public static final String ORB_ID = "BoardGame:BGLightning";
@@ -76,7 +79,6 @@ public class BGLightning extends CustomOrb {
             }
         }
     }
-
 
     public void updateDescription() {
         applyFocus();

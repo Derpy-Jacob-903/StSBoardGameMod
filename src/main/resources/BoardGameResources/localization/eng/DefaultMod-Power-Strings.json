@@ -15,6 +15,15 @@
                 " Attacks."
         ]
 },
+"BoardGame:Lock-On (BG)": {
+        "NAME": "Lock-On",
+        "DESCRIPTIONS": [
+                "Receive #b",
+                " more damage from Orbs for the next #b",
+                "turn.",
+                " turns."
+        ]
+},
 "BoardGame:Weakened (BG)": {
         "NAME": "Weakened",
         "DESCRIPTIONS": [

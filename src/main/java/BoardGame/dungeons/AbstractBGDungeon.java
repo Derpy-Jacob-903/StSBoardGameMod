@@ -4,6 +4,8 @@ import BoardGame.cards.BGBlue.BGClaw;
 import BoardGame.cards.BGBlue.BGClaw2;
 import BoardGame.cards.BGCurse.*;
 import BoardGame.cards.*;
+import BoardGame.cards.BGMint.BGGoldenTicket_M;
+import BoardGame.cards.BGStatus.BGError;
 import BoardGame.characters.*;
 import BoardGame.events.BGColosseum;
 import BoardGame.events.BGDeadAdventurer;
@@ -157,14 +159,15 @@ public abstract class AbstractBGDungeon extends AbstractDungeon {
                 physicalRewardDecks.clear();
                 physicalRareRewardDecks.clear();
 
-                for(int i=0;i<4;i+=1){
+                for(int i=0;i<5;i+=1){
                     CardGroup rewards=new CardGroup(CardGroup.CardGroupType.CARD_POOL);
                     CardGroup rares=new CardGroup(CardGroup.CardGroupType.CARD_POOL);
                     AbstractCard gt;
                     if(i==0)gt=new BGGoldenTicket_R();
                     else if(i==1)gt=new BGGoldenTicket_G();
                     else if(i==2)gt=new BGGoldenTicket_B();
-                    else gt=new BGGoldenTicket_W();
+                    else if(i==3)gt=new BGGoldenTicket_W();
+                    else gt=new BGGoldenTicket_M();
                     rewards.addToTop(gt.makeCopy());
                     rewards.addToTop(gt.makeCopy());
                     ArrayList<AbstractCard> tmpPool = new ArrayList<>();
@@ -172,6 +175,7 @@ public abstract class AbstractBGDungeon extends AbstractDungeon {
                     else if(i==1) new BGSilent("Silent physical card pool", BGSilent.Enums.BG_SILENT).getCardPool(tmpPool);
                     else if(i==2) new BGDefect("Defect physical card pool", BGDefect.Enums.BG_DEFECT).getCardPool(tmpPool);
                     else if(i==3) new BGWatcher("Watcher physical card pool", BGWatcher.Enums.BG_WATCHER).getCardPool(tmpPool);
+                    else if(i==4) new BGRailgun("Railgun physical card pool", BGRailgun.Enums.BG_RAILGUN).getCardPool(tmpPool);
                     for (AbstractCard c : tmpPool) {
                         switch (c.rarity) {
                             case COMMON:
@@ -193,6 +197,11 @@ public abstract class AbstractBGDungeon extends AbstractDungeon {
                             rewards.addToTop(new BGClaw2());
                         }
                     }
+                    if(i==4){
+                        for(int j=0; j<BGClaw2.getClawPackCount() - 2 ; j+=1){
+                            rewards.addToTop(new BGClaw2());
+                        }
+                    }
                     rewards.shuffle(cardRng);
                     rares.shuffle(cardRng);
                     physicalRewardDecks.add(rewards);
@@ -208,6 +217,7 @@ public abstract class AbstractBGDungeon extends AbstractDungeon {
                 else if(AbstractDungeon.player instanceof BGSilent) whoAmI=1;
                 else if(AbstractDungeon.player instanceof BGDefect) whoAmI=2;
                 else if(AbstractDungeon.player instanceof BGWatcher) whoAmI=3;
+                else if(AbstractDungeon.player instanceof BGRailgun) whoAmI=4;
                 AbstractBGDungeon.rewardDeck = physicalRewardDecks.get(whoAmI);
                 AbstractBGDungeon.rareRewardDeck = physicalRareRewardDecks.get(whoAmI);
 
@@ -245,6 +255,7 @@ public abstract class AbstractBGDungeon extends AbstractDungeon {
                 logger.info("Silent physical deck contains "+physicalRewardDecks.get(1).size()+" cards");
                 logger.info("Defect physical deck contains "+physicalRewardDecks.get(2).size()+" cards");
                 logger.info("Watcher physical deck contains "+physicalRewardDecks.get(3).size()+" cards");
+                logger.info("Railgun physical deck contains "+physicalRewardDecks.get(4).size()+" cards");
                 logger.info("Colorless deck contains "+colorlessRewardDeck.size()+" cards");
                 logger.info("Curses deck contains "+cursesRewardDeck.size()+" cards");
                 logger.info("Current reward deck "+whoAmI+" is "+physicalRewardDecks.get(whoAmI).size()+" cards");
@@ -264,50 +275,50 @@ public abstract class AbstractBGDungeon extends AbstractDungeon {
     public static AbstractCard DrawFromRewardDeck(CardGroup deck, CardGroup raredeck){
         AbstractCard card = null;
         int tempsize=deck.size();
-        if(deck.size()>0) {
+        if(!deck.isEmpty()) {
             card = deck.getTopCard();
             deck.removeTopCard();
             deck.addToBottom(card.makeCopy());  //card gets copied here because we may have upgraded card after drawing it.
         }
-        AbstractCard tempcard=card;
+        AbstractCard tempcard = card;
         if(card instanceof BGGoldenTicket){
             //card = DrawFromRareRewardDeck();
-            if(raredeck!=null)card=DrawFromRewardDeck(raredeck);
+            if(raredeck!=null)card = DrawFromRewardDeck(raredeck);
         }
         logger.info("AbstractBGDungeon: drew reward card "+card);
-        if(card==null){
-            logger.info("PANIC!  Card was null?!  Originally drew "+tempcard+" from deck of size "+tempsize);
+        if(card == null){
+            logger.info("Card was null, using Error card. Originally drew "+tempcard+" from deck of size "+tempsize);
         }
-        return card;
+        return card != null ? card : new BGError();
     }
 
     public static AbstractCard DrawFromRareRewardDeck(){
         AbstractCard card=null;
-        if(rareRewardDeck.size()>0) {
+        if(!rareRewardDeck.isEmpty()) {
             card = rareRewardDeck.getTopCard();
             rareRewardDeck.removeTopCard();
             rareRewardDeck.addToBottom(card.makeCopy());
         }
-        return card;
+        return card != null ? card : new BGError();
     }
 
     public static AbstractCard DrawFromColorlessRewardDeck(){
         AbstractCard card=null;
-        if(colorlessRewardDeck.size()>0) {
+        if(!colorlessRewardDeck.isEmpty()) {
             card = colorlessRewardDeck.getTopCard();
             colorlessRewardDeck.removeTopCard();
             colorlessRewardDeck.addToBottom(card.makeCopy());
         }
-        return card;
+        return card != null ? card : new BGError();
     }
     public static AbstractCard DrawFromCursesRewardDeck(){
         AbstractCard card=null;
-        if(cursesRewardDeck.size()>0) {
+        if(!cursesRewardDeck.isEmpty()) {
             card = cursesRewardDeck.getTopCard();
             cursesRewardDeck.removeTopCard();
             cursesRewardDeck.addToBottom(card);
         }
-        return card;
+        return card != null ? card : new BGError();
     }
 
     @SpirePatch(clz = AbstractDungeon.class, method = "getRewardCards",

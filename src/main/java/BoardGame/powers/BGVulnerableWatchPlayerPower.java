@@ -27,20 +27,13 @@ public class BGVulnerableWatchPlayerPower extends AbstractBGPower implements Inv
         this.amount = amount;
         updateDescription();
         loadRegion("lockon");
-
 //        if (isSourceMonster) {
 //            this.justApplied = true;
 //        }
-
         this.type = AbstractPower.PowerType.BUFF;
         this.isTurnBased = false;
-
-
         this.priority = 99;
     }
-
-
-
 
 //    public void atEndOfTurn(boolean isPlayer) {
 //        //if player, wears off at end of monster action
@@ -57,13 +50,9 @@ public class BGVulnerableWatchPlayerPower extends AbstractBGPower implements Inv
         }
         addToBot((AbstractGameAction) new RemoveSpecificPowerAction(this.owner, this.owner, "BGVulnerableWatchPlayer"));
     }
-
     public void updateDescription() {
         this.description = DESCRIPTIONS[0];
     }
-
-
-
     public void stackPower(int stackAmount) {
         this.amount=1;
     }

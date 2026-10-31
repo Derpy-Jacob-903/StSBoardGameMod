@@ -5,7 +5,9 @@ import BoardGame.cards.BGGreen.BGDoppelganger;
 import BoardGame.powers.BGSurroundedPower;
 import BoardGame.powers.ManualStartTurnPhasePower;
 import basemod.ReflectionHacks;
+import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
+import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -42,6 +44,7 @@ public abstract class AbstractBGPlayer extends CustomPlayer {
     public int shivsPlayedThisTurn=0;
     public boolean startTurnPhaseIsActive=true;
     public boolean stanceChangedThisTurn=false;
+
     //public int currentRow=0;
 
     public void applyStartOfTurnRelics() {
@@ -86,6 +89,19 @@ public abstract class AbstractBGPlayer extends CustomPlayer {
     }
     public AbstractBGPlayer(String name, AbstractPlayer.PlayerClass playerClass, EnergyOrbInterface energyOrbInterface, String model, String animation) {
         super(name, playerClass, energyOrbInterface, model, animation);
+
+        //AbstractPlayer expects potion slots to decrease at A11; override that here
+        //TODO: code reuse; move to function
+        if (AbstractDungeon.ascensionLevel >= 4)this.potionSlots--;
+        if (AbstractDungeon.ascensionLevel >= 11)this.potionSlots++;
+        this.potions.clear();
+        int i;
+        for (i = 0; i < this.potionSlots; i++)
+            this.potions.add(new PotionSlot(i));
+    }
+
+    public AbstractBGPlayer(String name, PlayerClass setClass, String[] orbTextures, String orbVfxPath, SpriterAnimation spriterAnimation) {
+        super(name, setClass, new CustomEnergyOrb(orbTextures, orbVfxPath, null), spriterAnimation);
 
         //AbstractPlayer expects potion slots to decrease at A11; override that here
         //TODO: code reuse; move to function
